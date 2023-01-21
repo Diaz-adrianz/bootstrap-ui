@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="bootstrap.css" />
+		<link rel="stylesheet" href="custom.css" />
+
+		<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="modal fade" id="profile" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content bg-dark">
+					<div class="modal-header bg-dark-tint border-0">
+						<h1 class="modal-title fs-5 text-white">Your profile</h1>
+					</div>
+					<div class="modal-body">
+						<figure
+							class="m-0 bg-dark-tint rounded-circle mx-auto mt-3 mb-5"
+							style="width: 10rem; height: 10rem"
+						></figure>
+						<div class="input-group mb-3 bg-transparent">
+							<span class="input-group-text bg-dark border-secondary">
+								<i class="ri-google-fill text-secondary fs-4"></i>
+							</span>
+
+							<div class="form-floating">
+								<input
+									type="email"
+									class="disabled form-control bg-transparent text-white border-secondary shadow-none"
+									id="gmail"
+									value="dazveloper@gmail.com"
+									placeholder="."
+									disabled
+								/>
+								<label for="gmail" class="text-secondary">Gmail</label>
+							</div>
+						</div>
+						<div class="input-group mb-3 bg-transparent">
+							<span class="input-group-text bg-dark border-secondary">
+								<i class="ri-account-circle-line text-secondary fs-4"></i>
+							</span>
+
+							<div class="form-floating">
+								<input
+									type="text"
+									class="form-control bg-transparent text-white border-secondary shadow-none"
+									id="username"
+									placeholder="."
+								/>
+								<label for="username" class="text-secondary">Username</label>
+							</div>
+						</div>
+						<div class="input-group mb-3 bg-transparent">
+							<span class="input-group-text bg-dark border-secondary">
+								<i class="ri-information-line text-secondary fs-4"></i>
+							</span>
+
+							<div class="form-floating">
+								<input
+									type="text"
+									class="form-control bg-transparent text-white border-secondary shadow-none"
+									placeholder="."
+								/>
+								<label for="about" class="text-secondary">About</label>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer border-dark-tint p-1">
+						<button
+							type="button"
+							class="flex-grow-1 btn btn-lg btn-outline-danger rounded-2 border-0"
+							data-bs-dismiss="modal"
+						>
+							<h6 class="m-0 pt-1">Close</h6>
+						</button>
+						<button type="button" class="flex-grow-1 btn btn-lg btn-outline-primary rounded-2 border-0">
+							<h6 class="m-0 pt-1">Save</h6>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row container-fluid overflow-hidden vh-100 bg-dark text-white p-0 m-0">
+			<!-- .  -->
+			<!-- SIDE  -->
+			<div id="sidebar" class="d-flex h-100 col col-md-6 col-lg-4 p-0">
+				<!-- NAVIGATIONS  -->
+				<nav class="d-flex flex-column gap-2 p-3 px-1 px-sm-3 align-items-center">
+					<a class="btn btn-link active">
+						<i class="ri-message-3-line fs-4"></i>
+					</a>
+					<a class="btn btn-link">
+						<i class="ri-group-line fs-4"></i>
+					</a>
+					<a class="btn btn-link">
+						<i class="ri-contacts-line fs-4"></i>
+					</a>
+					<div class="dropdown mt-auto">
+						<button
+							class="btn btn-link position-relative btn-sm"
+							type="button"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>
+							<i class="ri-notification-line fs-4"></i>
+							<span class="position-absolute translate-middle badge rounded-pill bg-danger" style="top: 20%; left: 80%">
+								2
+							</span>
+						</button>
+						<ul class="dropdown-menu dropdown-menu-dark overflow-auto" style="max-height: 50vh">
+							<li>
+								<a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+									<i class="ri-contacts-line text-info"></i>
+									Chat request from Udin
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item d-flex gap-2 align-items-center" href="#">
+									<i class="ri-error-warning-line text-warning"></i>
+									You have been warned!
+								</a>
+							</li>
+						</ul>
+					</div>
+					<button class="btn btn-link">
+						<i class="ri-settings-line fs-4"></i>
+					</button>
+					<hr class="border-secondary border w-50" />
+					<figure
+						class="m-0 bg-dark-tint rounded-3"
+						style="width: 2.5rem; height: 2.5rem"
+						data-bs-toggle="modal"
+						data-bs-target="#profile"
+					></figure>
+				</nav>
+
+				<!-- SIDEBAR  -->
+				<aside class="bg-dark-tint flex-grow-1 overflow-hidden border-end border-dark border-3">
+					<header class="p-3 d-flex gap-2 align-items-end">
+						<h1 class="m-0 pb-5 me-auto">Charla</h1>
+						<button class="btn btn-link btn-sm">
+							<i class="ri-search-line fs-6"></i>
+						</button>
+						<div class="dropdown">
+							<button class="btn btn-link btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="ri-more-2-line fw-bold fs-6"></i>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#">New Group</a></li>
+							</ul>
+						</div>
+					</header>
+
+					<!-- ITEMS  -->
+					<table class="table table-hover table-dark w-100">
+						<tbody>
+							<tr class="active" data-bs-toggle="offcanvas" data-bs-target="#main-chat">
+								<th scope="row" class="ps-3 py-3">
+									<figure class="m-0 bg-dark rounded-circle" style="width: 3rem; height: 3rem"></figure>
+								</th>
+								<td class="pe-3 py-3">
+									<div class="d-flex">
+										<h5 class="mb-1">Dazveloper</h5>
+										<span class="small text-secondary ms-auto">yesterday</span>
+									</div>
+									<div class="d-flex align-items-start">
+										<p class="m-0 text-secondary text-start w-100">Lorem ipsum dolor sit amet, consectetur</p>
+										<span class="badge bg-primary ms-auto rounded-pill pt-2">12</span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" class="ps-3 py-3">
+									<figure class="m-0 bg-dark rounded-circle" style="width: 3rem; height: 3rem"></figure>
+								</th>
+								<td class="pe-3 py-3 w-100">
+									<div class="d-flex">
+										<h5 class="mb-1">Dazveloper</h5>
+										<span class="small text-secondary ms-auto">yesterday</span>
+									</div>
+									<div class="d-flex align-items-start">
+										<p class="m-0 text-secondary text-start w-100">Lorem ipsum dolor sit amet, consectetur</p>
+										<span class="badge bg-primary ms-auto rounded-pill pt-2">12</span>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</aside>
+			</div>
+
+			<!-- MAIN  -->
+			<main id="main-chat" class="d-flex flex-column col-md-6 col-lg-8 p-0 offcanvas-md offcanvas-end" tabindex="-1">
+				<!-- . -->
+				<!-- CHAT INFO  -->
+				<header class="d-flex gap-3 align-items-center p-3 bg-dark-tint">
+					<button
+						class="btn btn-link btn-sm py-0 d-md-none"
+						type="button"
+						data-bs-dismiss="offcanvas"
+						data-bs-target="#main-chat"
+					>
+						<i class="ri-arrow-left-line fs-1"></i>
+					</button>
+					<figure class="m-0 bg-dark rounded-circle" style="width: 3rem; height: 3rem"></figure>
+					<div>
+						<h5 class="m-0">Dazveloper</h5>
+						<span class="text-secondary">
+							<span class="badge bg-primary rounded-circle p-1 border border-primary me-1">
+								<span class="visually-hidden">1</span>
+							</span>
+							online
+						</span>
+					</div>
+					<div class="dropdown ms-auto">
+						<button class="btn btn-link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<i class="ri-more-2-line fw-bold fs-4"></i>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">New Group</a></li>
+						</ul>
+					</div>
+				</header>
+
+				<!-- MESSAGES  -->
+				<div id="msgs" class="bg-dark d-flex gap-3 flex-grow-1 flex-column-reverse p-3 overflow-auto">
+					<div class="msg">
+						<p class="m-0">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus necessitatibus ab perferendis est
+							possimus sunt hic ex tempora aperiam ad.
+						</p>
+						<span class="small text-secondary">Dazveloper ∘ 10:15 am</span>
+					</div>
+					<div class="msg end">
+						<p class="m-0">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus necessitatibus ab perferendis est
+							possimus sunt hic ex tempora aperiam ad.
+						</p>
+						<span class="small text-secondary">You ∘ 10:15 am</span>
+					</div>
+					<span class="text-secondary text-center my-4">Today</span>
+				</div>
+
+				<!-- INPUT MESSAGE  -->
+				<div class="bg-dark-tint p-3">
+					<form class="d-flex bg-dark p-2 px-3 align-items-center gap-3 rounded-3">
+						<textarea
+							rows="1"
+							data-maxrow="4"
+							placeholder="Type message..."
+							class="form-control form-control-lg px-0 bg-transparent text-white shadow-none border-0"
+						></textarea>
+						<div class="border-end border-secondary text-dark">1</div>
+						<button class="btn btn-primary py-1 rounded-pill">
+							<i class="ri-send-plane-2-line fs-5"></i>
+						</button>
+					</form>
+				</div>
+			</main>
+		</div>
+
+		<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+	</body>
+</html>
